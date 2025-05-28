@@ -1,34 +1,34 @@
-remote_theme: pages-themes/cayman@v0.2.0
+# remote_theme: pages-themes/cayman@v0.2.0
 theme: cayman
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+# plugins:
+# - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
-title: Joel Carlson's Website
-description: A website about my projects and interests
-author: Joel Carlson
+# title: Joel Carlson's Website
+# description: A website about my projects and interests
+# author: Joel Carlson
 
-social:
-  - name: Twitter
-    url: https://twitter.com/joelcarlson
-  - name: GitHub
-    url: https://github.com/joel-carlson
-  - name: LinkedIn
-    url: https://linkedin.com/in/joel-d-carlson
+# social:
+#   - name: Twitter
+#     url: https://twitter.com/joelcarlson
+#   - name: GitHub
+#     url: https://github.com/joel-carlson
+#   - name: LinkedIn
+#     url: https://linkedin.com/in/joel-d-carlson
 
-url: https://joelcarlson.com
-baseurl: /
+# url: https://joelcarlson.com
+# baseurl: /
 
-google_analytics:
-  - id: UA-12345678-1
-    name: Joel Carlson's Website
+# google_analytics:
+#   - id: UA-12345678-1
+#     name: Joel Carlson's Website
 
-markdown: kramdown
-permalink: /:title/
-future: true
+# markdown: kramdown
+# permalink: /:title/
+# future: true
 
-timezone: America/Denver
-encoding: utf-8
+# timezone: America/Denver
+# encoding: utf-8
 
