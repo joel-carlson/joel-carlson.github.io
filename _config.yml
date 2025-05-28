@@ -4,3 +4,30 @@ plugins:
 
 
 gem "github-pages", group: :jekyll_plugins
+
+title: Joel Carlson's Website
+description: A website about my projects and interests
+author: Joel Carlson
+
+social:
+  - name: Twitter
+    url: https://twitter.com/joelcarlson
+  - name: GitHub
+    url: https://github.com/joel-carlson
+  - name: LinkedIn
+    url: https://linkedin.com/in/joelcarlson
+
+url: https://joelcarlson.com
+baseurl: /
+
+google_analytics:
+  - id: UA-12345678-1
+    name: Joel Carlson's Website
+
+markdown: kramdown
+permalink: /:title/
+future: true
+
+timezone: America/Denver
+encoding: utf-8
+
