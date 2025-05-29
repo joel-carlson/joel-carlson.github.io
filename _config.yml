@@ -1,5 +1,5 @@
-# remote_theme: pages-themes/cayman@v0.2.0
-theme: cayman
+remote_theme: pages-themes/cayman@v0.2.0
+# theme: cayman
 title: Joel Carlson's Website
 description: A website about my projects and interests
 author: Joel Carlson
