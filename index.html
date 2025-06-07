@@ -398,7 +398,176 @@
       </div>
     </div>
   </section>
-  
+ 
+  <!-- About: Education and Professional Experience -->
+<section class="page-section" id="about">
+  <div class="container">
+    <div class="row">
+      <!-- Education Column -->
+      <div class="col-md-6">
+        <h2 class="section-heading text-uppercase">Education</h2>
+
+        <div class="education-item">
+          <h4>2020 – 2024</h4>
+          <h5>B.S. in Computer Science</h5>
+          <p>
+            University of Colorado Boulder @ Western Colorado University<br/>
+            Orchestra member | Cross Country & Track Team
+          </p>
+        </div>
+
+        <div class="education-item">
+          <h4>2024 – Now</h4>
+          <h5>M.S. in Computer Science</h5>
+          <p>University of Colorado Boulder: Focus in AI and Machine Learning</p>
+        </div>
+      </div>
+
+      <!-- Experience Column -->
+      <div class="col-md-6">
+        <h2 class="section-heading text-uppercase">Professional Experience</h2>
+
+        <!-- Job #1 -->
+        <div class="experience-item mb-4">
+          <h4>Machine Learning Research Intern</h4>
+          <h5>Rocky Mountain Biological Laboratory</h5>
+          <small>Summer 2023</small>
+          
+          <!-- Always-visible bullets -->
+          <ul>
+            <li>Developed CNN models to classify plant species with 92% accuracy.</li>
+            <li>Automated data-cleaning pipeline in Python, reducing prep time by 40%.</li>
+          </ul>
+
+          <!-- Modal Trigger -->
+          <button type="button"
+                  class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#mlInternModal">
+            Show More ↓
+          </button>
+        </div>
+
+        <!-- Job #2 -->
+        <div class="experience-item mb-4">
+          <h4>Software Engineering Intern</h4>
+          <h5>BioMEMS</h5>
+          <small>Fall 2022</small>
+          
+          <ul>
+            <li>Built RESTful APIs in Node.js, serving 2,000+ daily requests.</li>
+            <li>Integrated OAuth2 authentication, improving security.</li>
+          </ul>
+
+          <button type="button"
+                  class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bioMEMSModal">
+            Show More ↓
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal #1: ML Intern -->
+<div class="modal fade" id="mlInternModal" tabindex="-1" aria-labelledby="mlInternLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mlInternLabel">
+          ML Research Intern @ RMBL (Summer 2023)
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Overview</h3>
+        <p>
+          Collaborated with ecologists to build a CNN-based pipeline classifying alpine plants
+          from field images.
+        </p>
+        <h3>Code Snippet</h3>
+        <pre><code class="language-python">
+import torchvision.models as models
+import torch.nn as nn
+
+class PlantClassifier(nn.Module):
+    def __init__(self, num_classes=12):
+        super().__init__()
+        self.backbone = models.resnet18(pretrained=True)
+        self.backbone.fc = nn.Linear(512, num_classes)
+
+    def forward(self, x):
+        return self.backbone(x)
+        </code></pre>
+        <h3>Images</h3>
+        <img src="assets/img/ml_intern/prediction_example.png" class="img-fluid" alt="Prediction Example"/>
+        <h3>Deep Dive</h3>
+        <ul>
+          <li>Labeled 5,000+ images with a team of 4 biologists.</li>
+          <li>Hyperparameter tuning in TensorFlow → +6% accuracy.</li>
+          <li>Packaged as Flask app with REST endpoint for field use.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal #2: BioMEMS -->
+<div class="modal fade" id="bioMEMSModal" tabindex="-1" aria-labelledby="bioMEMSLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bioMEMSLabel">
+          Software Engineering Intern @ BioMEMS (Fall 2022)
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Overview</h3>
+        <p>
+          Designed and deployed RESTful services + a real-time dashboard for biomedical sensors.
+        </p>
+        <h3>Architecture Diagram</h3>
+        <img src="assets/img/biomems/architecture.png" class="img-fluid" alt="System Architecture"/>
+        <h3>Code Snippet</h3>
+        <pre><code class="language-javascript">
+const express = require('express');
+const app = express();
+
+// OAuth2 middleware
+app.use(require('./middleware/oauth2'));
+
+app.get('/api/data', (req, res) => {
+  // fetch sensor readings...
+  res.json({ data: readings });
+});
+
+app.listen(3000, () => console.log('API running'));
+        </code></pre>
+        <h3>Deep Dive</h3>
+        <ul>
+          <li>Designed PostgreSQL schema; wrote migration scripts.</li>
+          <li>Built React dashboard with real-time WebSocket updates.</li>
+          <li>Achieved test coverage from 55% → 85% via Jest.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Toggle Script (place at bottom of page or in a .js file) -->
   <script>
     document.querySelectorAll('.toggle-details').forEach(btn => {
@@ -423,51 +592,35 @@
   </style>
   
         <!-- Team-->
-        <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase"> Meet Joel Carlson</h2>
+                <!-- <h3 class="section-subheading text-muted"></h3> -->
             </div>
-        </section>
+            <div class="row">
+                    <div class="team-member">
+                        <img class="rounded-circle" src="assets/img/team/joel.jpg" alt="..." />
+                        <h4>Joel Carlson</h4>
+                        <p class="text-muted">Lead Designer</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/JoelCarlson14" target="_blank" rel="noopener" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a> -->
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/joel-d-carlson/"target="_blank" rel="noopener" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Instagram Profile"><i class="fab fa-instagram"></i></a> -->
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/joel-carlson" target="_blank" rel="noopener" aria-label="Joel Carlson GitHub Profile"><i class="fab fa-github"></i></a>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+            </div>
+        </div>
+    </section>
         <!-- Clients-->
-        <div class="py-5">
+
+
+<!-- Here could insert later -->
+        
+        <!-- <div class="py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-3 col-sm-6 my-3">
@@ -484,7 +637,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
