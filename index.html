@@ -36,6 +36,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -217,6 +218,122 @@
                 </div>
             </div>
         </section>
+
+<!-- Publications-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Writing & Publications</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* Constrain and center each card */
+    #preview-container .card {
+      max-width: 600px;
+      margin: 1.5rem auto;
+    }
+  </style>
+</head>
+<body>
+  <section id="writing" class="page-section">
+    <div class="container">
+      <h2 class="section-heading text-uppercase mb-4">
+        Writing & Publications
+      </h2>
+
+      <!-- All cards go here -->
+      <div id="preview-container"></div>
+
+      <!-- Shown if all previews fail -->
+      <div id="embed-error" class="alert alert-warning d-none">
+        Unable to load article previews.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (async function() {
+      // 1) List your Medium article URLs here
+      const posts = [
+        'https://medium.com/correll-lab/build-your-own-duolingo-creating-a-translation-transformer-model-for-language-learning-c9577d78d42a',
+        'https://medium.com/correll-lab/llms-executing-code-24200aca4cda',
+        'https://medium.com/@Joel_Carlson/segment-anything-from-the-skys-above-baff8014904a',
+        // add more URLs as needed
+      ];
+
+      const container = document.getElementById('preview-container');
+      const errorAlert = document.getElementById('embed-error');
+      let successCount = 0;
+
+      // Helper to fetch & parse OG tags
+      async function fetchMeta(url) {
+        const proxyURL = 'https://api.allorigins.win/raw?url=' +
+          encodeURIComponent(url);
+        const res = await fetch(proxyURL);
+        if (!res.ok) throw new Error(`Network response was not ok for ${url}`);
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const getMeta = name =>
+          doc.querySelector(`meta[property="${name}"]`)?.content || '';
+        return {
+          image: getMeta('og:image'),
+          title: getMeta('og:title'),
+          description: getMeta('og:description'),
+          siteName: getMeta('og:site_name') || 'Medium'
+        };
+      }
+
+      // Process each URL in sequence (you could also do Promise.all)
+      for (const url of posts) {
+        try {
+          const { image, title, description, siteName } = await fetchMeta(url);
+
+          // Build the Bootstrap card
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            ${image ? `<img src="${image}" class="card-img-top" alt="${title}">` : ''}
+            <div class="card-body">
+              <h5 class="card-title">${title}</h5>
+              <p class="card-text">${description}</p>
+              <a href="${url}" target="_blank" class="btn btn-primary">
+                Read on Medium
+              </a>
+            </div>
+            <div class="card-footer text-muted small">
+              ${siteName}
+            </div>
+          `;
+          container.appendChild(card);
+          successCount++;
+        } catch (err) {
+          console.error('Error loading preview for', url, err);
+        }
+      }
+
+      // If none succeeded, show the error alert
+      if (successCount === 0) {
+        errorAlert.classList.remove('d-none');
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">

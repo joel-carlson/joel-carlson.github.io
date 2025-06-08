@@ -11269,6 +11269,63 @@ header.masthead .masthead-heading {
   height: 2.75rem;
 }
 
+/* writing section */
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .2s ease, box-shadow .2s ease;
+  margin: 1.5rem auto;
+  max-width: 600px;
+}
+
+.preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.preview-card__image {
+  padding-bottom: 56%; /* 16:9 aspect ratio */
+  background-size: cover;
+  background-position: center;
+}
+
+.preview-card__body {
+  padding: 1rem;
+}
+
+.preview-card__title {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.preview-card__desc {
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.preview-card__cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #02b875;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.preview-card__footer {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #888;
+  border-top: 1px solid #eee;
+}
+
+
+
+
+
 section#contact {
   background-color: #212529;
   background-image: url("../assets/img/map-image.png");
