@@ -184,7 +184,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                        <img class="img-fluid" src="assets/img/portfolio/ai-atari.png" alt="..." />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">AI Playing Atari Games</div>
@@ -199,7 +199,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                        <img class="img-fluid" src="assets/img/portfolio/memory-c.png" alt="..." />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">Memory Storage System in C</div>
@@ -214,7 +214,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                        <img class="img-fluid" src="assets/img/portfolio/unix.png" alt="..." />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading"> Unix System Programming in C++</div>
@@ -264,7 +264,7 @@
               <!-- Hero image or screenshot -->
               <img
                 class="img-fluid d-block mx-auto mb-4"
-                src="assets/img/portfolio/secure-chat-screenshot.png"
+                src="assets/img/portfolio/1.jpg"
                 alt="Secure Messaging App Screenshot"
               />
 
@@ -379,41 +379,74 @@
   </div>
 </div>
 
-        <!-- Portfolio item 3 modal popup: Battle of Wits-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/Battle_Wits.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Portfolio item 3 modal popup: Battle of Wits-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="modal-body">
+
+              <!-- Project details-->
+              <h2 class="text-uppercase">Battle of Wits: Examining the Deceitful and Trustworthy Behaviors of LLMs</h2>
+              <p class="item-intro text-muted">
+                Apr 2025 - Apr 2025 | University of Colorado Boulder
+              </p>
+
+              <!-- Hero image or screenshot -->
+              <img
+                class="img-fluid d-block mx-auto mb-4"
+                src="assets/img/portfolio/Battle_Wits.jpg"
+                alt="Battle of Wits Screenshot"
+              />
+
+              <!-- Full description -->
+              <p>
+                In Battle of Wits, we introduce a two-agent social-deduction game, inspired by The Princess Bride, to probe when and how large language models (LLMs) choose to trust or deceive, and to uncover the reasoning behind those decisions. We repurpose a “cups of poison” setup into a controlled “boxes and block” scenario and evaluate a 7 billion-parameter model (gemma:7b) under zero-, one-, and two-shot prompting. By assigning explicit truth-telling or deceitful roles to each agent, we measure block-location guessing accuracy across the 2×2 belief–disposition matrix.
+              </p>
+
+              <!-- Key findings list -->
+              <ul class="list-inline mb-4">
+                <li><strong>🤖 Deceit Conditions:</strong> Deceit emerges reliably only when prompt examples and deceptive intent align, with one- and two-shot prompts significantly boosting the defender’s ability to mislead.</li>
+                <li><strong>🔍 Mixed Responses:</strong> Even with a deceitful mandate, LLMs sometimes default to truthful or mixed responses, yielding near-50 % baseline accuracy.</li>
+                <li><strong>❓ Zero-Shot Insight:</strong> Zero-shot prompting exhibits an inverse relationship between question count and guess accuracy, suggesting that simpler interrogation can outperform more elaborate questioning without examples.</li>
+              </ul>
+
+              <!-- Tech stack badges -->
+              <p class="mb-4">
+                <span class="badge bg-secondary me-1">gemma:7b</span>
+                <span class="badge bg-secondary me-1">Zero-Shot</span>
+                <span class="badge bg-secondary me-1">One-Shot</span>
+                <span class="badge bg-secondary">Two-Shot</span>
+              </p>
+
+              <!-- Reproducibility statement -->
+              <p class="mb-5">
+                This work delivers a reproducible framework for quantifying LLMs’ social-behavior biases, laying critical groundwork for safely integrating autonomous agents into trust-sensitive, high-stakes environments, and offering deep insights into the models’ decision-making processes.
+              </p>
+
+              <!-- Close button -->
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+
             </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         <!-- Portfolio item 4 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -426,7 +459,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ai-atari-inside.png" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
@@ -461,7 +494,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/memory-c-inside.png" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
@@ -496,7 +529,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/unix-inside.png" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
