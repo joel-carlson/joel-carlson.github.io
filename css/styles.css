@@ -10957,6 +10957,7 @@ p {
   }
 }
 header.masthead {
+  position: relative;         /* enable absolutely-positioned overlay */
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
@@ -10966,6 +10967,18 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);  /* adjust alpha for more/less darkness */
+  z-index: 1;
+}
+
+header.masthead .container {
+  position: relative;  /* stack above the overlay */
+  z-index: 2;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
