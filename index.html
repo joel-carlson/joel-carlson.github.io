@@ -20,14 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <nav class="navbar …" id="mainNav">
-                    <div class="container">
-                      <!-- Replace the logo SVG with text: -->
-                      <a class="navbar-brand" href="#page-top">
-                        Joel Carlson
-                    </a>
-                    </div>
-                  </nav>
+                <a class="navbar-brand" href="#page-top">Joel Carlson</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -36,10 +29,10 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#writing">Writing</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm px-3 py-2 text-white text-uppercase" href="AI-Joel-Carlson-Resume-PDF.pdf" target="_blank">Resume</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,10 +51,8 @@
                 Master’s Student in Machine Learning
                 </div>
 
-                <!-- A call-to-action pointing at your work -->
-                <a class="btn btn-primary btn-xl text-uppercase" href="#projects">
-                View My Projects
-                </a>
+                <a class="btn btn-primary btn-xl text-uppercase me-3" href="#projects">View My Projects</a>
+                <a class="btn btn-light btn-xl text-uppercase" href="AI-Joel-Carlson-Resume-PDF.pdf" target="_blank">Download CV</a>
             </div>
           </header>
         <!-- Services-->
@@ -223,6 +214,21 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 8: Coin Flip Betting Game -->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="Coin Flip Betting Game" />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Coin Flip Betting Game</div>
+                        <div class="portfolio-caption-subheading text-muted">Distributed Java Application</div>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
                 <!-- Portfolio item 7:  -->
                 <div class="portfolio-item">
@@ -335,38 +341,32 @@
           <div class="col-lg-8">
             <div class="modal-body">
               <!-- Project details-->
-              <h2 class="text-uppercase">Habitat UI &amp; API</h2>
-              <p class="item-intro text-muted">
-                A full-stack environmental data platform built at UCBoulder.
-              </p>
-              <img 
-                class="img-fluid d-block mx-auto" 
-                src="assets/img/portfolio/2.jpg" 
-                alt="Screenshot of Habitat UI dashboard" 
+              <h2 class="text-uppercase">Invasive Species Reporting App</h2>
+              <p class="item-intro text-muted">Aug 2023 – May 2024 · University of Colorado Boulder</p>
+              <img
+                class="img-fluid d-block mx-auto mb-4"
+                src="assets/img/portfolio/CheatgrassInfographic.jpg"
+                alt="Invasive Species App"
               />
               <p>
-                This is an app made for the local Gunnison communnity to help combat the spread of Cheat Grass. 
-
-
-
-                HabitatUI is a React/TypeScript front-end for visualizing ecological survey data.
-                It consumes REST endpoints exposed by HabitatApi, a Node.js/Express service
-                backed by PostgreSQL. Together they allow researchers to:
+                A cross-platform mobile application built to help the Gunnison community combat the spread of Cheatgrass and other invasive species through crowd-sourced field reports. Users submit geo-tagged sightings that are aggregated and visualized for researchers and land managers.
               </p>
-              <ul class="list-inline">
-                <li><strong>Interactive maps:</strong> Filter, pan & zoom sensor and survey data</li>
-                <li><strong>Real-time updates:</strong> WebSocket feeds for live environmental readings</li>
-                <li><strong>Secure access:</strong> JWT-based auth via HabitatApi middleware</li>
-                <li><strong>Deployable:</strong> Dockerized for Kubernetes or standalone use</li>
+              <ul class="list-inline mb-4">
+                <li><strong>📱 Cross-platform:</strong> React Native interface for iOS and Android</li>
+                <li><strong>🗺️ Offline maps:</strong> Interactive offline maps for use in remote areas without connectivity</li>
+                <li><strong>☁️ Cloud backend:</strong> Node.js REST API backed by AWS DynamoDB for scalable data management</li>
+                <li><strong>📊 Crowd-sourced:</strong> User-generated submissions for tracking and mapping invasive species spread</li>
+                <li><strong>👥 Team:</strong> Collaborative development with tight deadlines and limited budget</li>
               </ul>
-              <p>
-                View the code on GitHub:
-                <a href="https://github.com/UCBoulder/HabitatUI" target="_blank">HabitatUI</a> |
-                <a href="https://github.com/UCBoulder/HabitatApi" target="_blank">HabitatApi</a>
+              <p class="mb-5">
+                <span class="badge bg-secondary me-1">React Native</span>
+                <span class="badge bg-secondary me-1">Node.js</span>
+                <span class="badge bg-secondary me-1">AWS DynamoDB</span>
+                <span class="badge bg-secondary">RESTful API</span>
               </p>
-              <button 
-                class="btn btn-primary btn-xl text-uppercase" 
-                data-bs-dismiss="modal" 
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
                 type="button"
               >
                 <i class="fas fa-xmark me-1"></i>
@@ -428,8 +428,13 @@
 
 
               <!-- Reproducibility statement -->
-              <p class="mb-5">
+              <p>
                 This work delivers a reproducible framework for quantifying LLMs’ social-behavior biases, laying critical groundwork for safely integrating autonomous agents into trust-sensitive, high-stakes environments, and offering deep insights into the models’ decision-making processes.
+              </p>
+              <p class="mb-5">
+                <a href="https://github.com/MilesMena/battle_of_wits" target="_blank" class="text-primary">
+                  <i class="fab fa-github me-1"></i>github.com/MilesMena/battle_of_wits
+                </a>
               </p>
 
               <!-- Close button -->
@@ -460,20 +465,25 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ai-atari-inside.png" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
+                                    <h2 class="text-uppercase">Python-Based AI Learning Agents for Atari Games</h2>
+                                    <p class="item-intro text-muted">Apr 2023 · University of Colorado Boulder</p>
+                                    <img class="img-fluid d-block mx-auto mb-4" src="assets/img/portfolio/ai-atari-inside.png" alt="AI Atari Agents" />
+                                    <p>
+                                        Implemented and compared three reinforcement learning algorithms — Q-learning, Approximate Q-learning, and Deep Q-Network (DQN) — by training agents to play classic Atari games. The project involved training, evaluation, and iterative optimization across multiple game environments to study how different learning paradigms converge.
+                                    </p>
+                                    <ul class="list-inline mb-4">
+                                        <li><strong>🎮 Algorithms:</strong> Q-learning, Approximate Q-learning, and Deep Q-Network (DQN) side-by-side</li>
+                                        <li><strong>📈 Analysis:</strong> Comprehensive performance benchmarking across multiple Atari environments</li>
+                                        <li><strong>⚙️ Optimization:</strong> Hyperparameter tuning and reward shaping to improve agent convergence speed</li>
+                                        <li><strong>📊 Evaluation:</strong> Data analysis and visualization to measure and compare agent decision-making</li>
                                     </ul>
+                                    <p class="mb-5">
+                                        <span class="badge bg-secondary me-1">Python</span>
+                                        <span class="badge bg-secondary me-1">TensorFlow</span>
+                                        <span class="badge bg-secondary me-1">OpenAI Gym</span>
+                                        <span class="badge bg-secondary me-1">Pandas</span>
+                                        <span class="badge bg-secondary">Reinforcement Learning</span>
+                                    </p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -495,20 +505,24 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/memory-c-inside.png" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
+                                    <h2 class="text-uppercase">Memory Storage Implementation in C</h2>
+                                    <p class="item-intro text-muted">Oct 2021 – Nov 2021 · University of Colorado Boulder</p>
+                                    <img class="img-fluid d-block mx-auto mb-4" src="assets/img/portfolio/memory-c-inside.png" alt="Memory Hierarchy Diagram" />
+                                    <p>
+                                        Designed and implemented a complete memory management system in C, integrating cache, virtual memory, and main memory into a unified hierarchy. The system demonstrates the full memory stack and optimizes access patterns through strategic use of efficient algorithms and system-level programming techniques.
+                                    </p>
+                                    <ul class="list-inline mb-4">
+                                        <li><strong>🗄️ Memory Hierarchy:</strong> Unified cache, virtual memory, and main memory subsystems</li>
+                                        <li><strong>⚡ Optimization:</strong> Algorithmic strategies to minimize cache misses and reduce access latency</li>
+                                        <li><strong>🔧 Systems Programming:</strong> Low-level C with manual memory management and pointer arithmetic</li>
+                                        <li><strong>📐 Architecture:</strong> Modular design enabling independent testing of each memory tier</li>
                                     </ul>
+                                    <p class="mb-5">
+                                        <span class="badge bg-secondary me-1">C</span>
+                                        <span class="badge bg-secondary me-1">Memory Management</span>
+                                        <span class="badge bg-secondary me-1">Systems Programming</span>
+                                        <span class="badge bg-secondary">Algorithm Design</span>
+                                    </p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -530,20 +544,24 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/unix-inside.png" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
+                                    <h2 class="text-uppercase">Unix System Programming in C++ and Python</h2>
+                                    <p class="item-intro text-muted">Jan 2021 – Apr 2021 · University of Colorado Boulder</p>
+                                    <img class="img-fluid d-block mx-auto mb-4" src="assets/img/portfolio/unix-inside.png" alt="Unix Shell Implementation" />
+                                    <p>
+                                        Built a custom Unix shell environment implementing core OS concepts from scratch in C++ and Python. The project covers the full lifecycle of process and resource management, demonstrating a deep understanding of how modern operating systems work under the hood.
+                                    </p>
+                                    <ul class="list-inline mb-4">
+                                        <li><strong>🔀 Process Management:</strong> Custom <code>fork()</code> and <code>exec()</code> for process spawning and replacement</li>
+                                        <li><strong>📁 I/O Redirection:</strong> File redirection using <code>dup()</code> / <code>dup2()</code> for stdin/stdout/stderr piping</li>
+                                        <li><strong>🧵 Concurrency:</strong> Multi-threaded execution with mutex locks and semaphores for synchronization</li>
+                                        <li><strong>⚙️ Shell Commands:</strong> Custom implementations of common Unix utilities with pipeline chaining</li>
                                     </ul>
+                                    <p class="mb-5">
+                                        <span class="badge bg-secondary me-1">C++</span>
+                                        <span class="badge bg-secondary me-1">Python</span>
+                                        <span class="badge bg-secondary me-1">Multithreading</span>
+                                        <span class="badge bg-secondary">POSIX</span>
+                                    </p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -565,20 +583,30 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/Satellite-Image.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <!-- <strong>Category:</strong>  -->
-                                            Photography
-                                        </li>
+                                    <h2 class="text-uppercase">DeepGlobe Challenge 2 with Transformers</h2>
+                                    <p class="item-intro text-muted">Apr 2025 – Present · University of Colorado Boulder</p>
+                                    <img class="img-fluid d-block mx-auto mb-4" src="assets/img/portfolio/Satellite-Image.jpg" alt="Satellite Image Segmentation" />
+                                    <p>
+                                        Extending the DeepGlobe Satellite Image Understanding Challenge (2nd Competition) by evaluating SAM 2.1 as a modern alternative to the U-Net–based architectures that won the original contest. This work investigates whether large-scale vision transformers can surpass specialized convolutional models on satellite imagery tasks, paving the way for more versatile remote-sensing tools.
+                                    </p>
+                                    <ul class="list-inline mb-4">
+                                        <li><strong>🛰️ Task:</strong> Land-cover segmentation of high-resolution satellite imagery across 6 terrain classes</li>
+                                        <li><strong>📐 Benchmarking:</strong> IoU, F1 score, and inference speed compared against top U-Net variants</li>
+                                        <li><strong>🔍 Feature analysis:</strong> Transformer-driven representations for improved boundary delineation in complex scenes</li>
+                                        <li><strong>🔄 Reproducibility:</strong> Automated preprocessing and augmentation pipeline for fair, reproducible comparisons</li>
                                     </ul>
+                                    <p class="mb-4">
+                                        <span class="badge bg-secondary me-1">Python</span>
+                                        <span class="badge bg-secondary me-1">PyTorch</span>
+                                        <span class="badge bg-secondary me-1">SAM 2.1</span>
+                                        <span class="badge bg-secondary me-1">Computer Vision</span>
+                                        <span class="badge bg-secondary">Transformers</span>
+                                    </p>
+                                    <p class="mb-5">
+                                        <a href="https://github.com/joel-carlson/DeepGlobe-2-Transformers" target="_blank" class="text-primary">
+                                            <i class="fab fa-github me-1"></i>github.com/joel-carlson/DeepGlobe-2-Transformers
+                                        </a>
+                                    </p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -590,17 +618,53 @@
                 </div>
             </div>
         </div>
-<!-- Publications-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Writing & Publications</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <style>
+<!-- Portfolio item 8 modal popup: Coin Flip Betting Game -->
+<div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal">
+                <img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Coin Flip Betting Game</h2>
+                            <p class="item-intro text-muted">Apr 2023 – May 2023 · University of Colorado Boulder</p>
+                            <p>
+                                A Java-based multi-device betting game backed by a centrally hosted database. Players create accounts and place bets on the outcome of a coin toss — heads or tails — with real-time results and persistent account balances. Built with a focus on concurrency, database design, and networked client-server communication.
+                            </p>
+                            <ul class="list-inline mb-4">
+                                <li><strong>🪙 Gameplay:</strong> Multi-player betting on coin toss outcomes with account management</li>
+                                <li><strong>🗄️ Database:</strong> Centrally hosted database for persistent user accounts and bet history</li>
+                                <li><strong>🔗 Networked:</strong> Client-server architecture supporting multiple simultaneous devices</li>
+                                <li><strong>⚡ Agile:</strong> Developed iteratively using Agile methodology with sprint-based delivery</li>
+                            </ul>
+                            <p class="mb-4">
+                                <span class="badge bg-secondary me-1">Java</span>
+                                <span class="badge bg-secondary me-1">Database Design</span>
+                                <span class="badge bg-secondary me-1">Agile</span>
+                                <span class="badge bg-secondary">Client-Server</span>
+                            </p>
+                            <p class="mb-5">
+                                <a href="https://github.com/JTxCo/412-FinalProj-CoinFlip" target="_blank" class="text-primary">
+                                    <i class="fab fa-github me-1"></i>github.com/JTxCo/412-FinalProj-CoinFlip
+                                </a>
+                            </p>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Writing & Publications -->
+<style>
     /* 1) Grid: force all rows to equal height */
     #preview-container {
       display: grid;
@@ -664,8 +728,6 @@
      display: none; 
     }
   </style>
-</head>
-<body>
   <section id="writing" class="page-section py-5">
     <div class="container">
       <h2 class="section-heading text-uppercase mb-4 text-center">
@@ -739,14 +801,7 @@
       }
     })();
   </script>
-</body>
-</html>
 
-
-
-          
-
- 
   <!-- About: Education and Professional Experience -->
 <section class="page-section" id="about">
   <div class="container">
@@ -850,8 +905,6 @@ class PlantClassifier(nn.Module):
     def forward(self, x):
         return self.backbone(x)
         </code></pre>
-        <h3>Images</h3>
-        <img src="assets/img/ml_intern/prediction_example.png" class="img-fluid" alt="Prediction Example"/>
         <h3>Deep Dive</h3>
         <ul>
           <li>Labeled 5,000+ images with a team of 4 biologists.</li>
@@ -883,8 +936,6 @@ class PlantClassifier(nn.Module):
         <p>
           Designed and deployed RESTful services + a real-time dashboard for biomedical sensors.
         </p>
-        <h3>Architecture Diagram</h3>
-        <img src="assets/img/biomems/architecture.png" class="img-fluid" alt="System Architecture"/>
         <h3>Code Snippet</h3>
         <pre><code class="language-javascript">
 const express = require('express');
@@ -948,18 +999,16 @@ app.listen(3000, () => console.log('API running'));
             </div>
             <div class="row">
                     <div class="team-member">
-                        <img class="rounded-circle" src="assets/img/team/joel.jpg" alt="..." />
+                        <img class="rounded-circle" src="assets/img/team/joel.png" alt="Joel Carlson" />
                         <h4>Joel Carlson</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/JoelCarlson14" target="_blank" rel="noopener" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a> -->
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/joel-d-carlson/"target="_blank" rel="noopener" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Instagram Profile"><i class="fab fa-instagram"></i></a> -->
-                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/joel-carlson" target="_blank" rel="noopener" aria-label="Joel Carlson GitHub Profile"><i class="fab fa-github"></i></a>
+                        <p class="text-muted">ML Engineer &amp; Master's Student</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/JoelCarlson14" target="_blank" rel="noopener" aria-label="Joel Carlson Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/joel-d-carlson/" target="_blank" rel="noopener" aria-label="Joel Carlson LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/joel-carlson" target="_blank" rel="noopener" aria-label="Joel Carlson GitHub"><i class="fab fa-github"></i></a>
                     </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Master's student in Computer Science at CU Boulder, specializing in AI and Machine Learning. My work spans computer vision, reinforcement learning, and LLM behavior research. When I'm not training models, I'm contributing to open-source projects and writing about AI on Medium.</p></div>
             </div>
         </div>
     </section>
@@ -990,79 +1039,31 @@ app.listen(3000, () => console.log('API running'));
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Get In Touch</h2>
+                    <h3 class="section-subheading text-muted">I'm currently seeking full-time ML engineering and software engineering roles. Feel free to reach out!</h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                </form>
+                <div class="text-center mt-4">
+                    <a class="btn btn-primary btn-xl text-uppercase me-3" href="mailto:cjoeld2024@gmail.com">
+                        <i class="fas fa-envelope me-2"></i>Email Me
+                    </a>
+                    <a class="btn btn-dark btn-xl text-uppercase" href="https://www.linkedin.com/in/joel-d-carlson/" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in me-2"></i>Connect on LinkedIn
+                    </a>
+                </div>
             </div>
         </section>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Joel Carlson 2026</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/JoelCarlson14" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/joel-carlson" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/joel-d-carlson/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                        <a class="link-dark text-decoration-none" href="AI-Joel-Carlson-Resume-PDF.pdf" target="_blank">Download CV</a>
                     </div>
                 </div>
             </div>
